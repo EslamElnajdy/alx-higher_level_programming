@@ -11,6 +11,7 @@ class Square:
 
         Args:
             size: size of square
+            position: tuble used in print fn
         """
         self.size = size
         self.position = position
