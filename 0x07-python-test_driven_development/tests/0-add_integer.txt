@@ -1,0 +1,36 @@
+Using "add_integer"
+=====================
+
+"b" is defaulted to int "98"
+all parameters must have int type
+Return the sum of the parameters
+
+Import "add_integer"
+
+    >>> add_integer = __import__('0-add_integer').add_integer
+
+1-
+    >>> add_integer(2, 3)
+    5
+
+2-
+    >>> add_integer(5, -1)
+    4
+
+3-
+    >>> add_integer(2)
+    100
+
+4-
+    >>> add_integer(2.1, 1)
+    3
+
+5-
+    >>> add_integer(2, 'aa')
+    Traceback (most recent call last):
+    ...
+    TypeError: b must be an add_integer
+
+6-
+    >>> add_integer(None)
+    
