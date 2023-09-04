@@ -32,9 +32,6 @@ class Rectangle:
 
     @height.setter
     def height(self, value):
-        """
-        set the attribute height
-        """
         if type(value) is not int:
             raise TabError("height must be an integer")
         if value < 0:
@@ -48,7 +45,6 @@ class Rectangle:
         Args:
             width: number of width
             height: number of width
-
         """
         self.__width = width
         self.__height = height
