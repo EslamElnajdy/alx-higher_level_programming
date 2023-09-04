@@ -1,9 +1,23 @@
 #!/usr/bin/python3
-"""class module"""
+"""
+class module
+"""
 
 
 class Rectangle:
-    """Rectangle class"""
+    """
+    Rectangle class
+    """
+    def __init__(self, width=0, height=0):
+        """
+        initialize the attributes
+
+        Args:
+            width: number of width
+            height: number of width
+        """
+        self.__width = width
+        self.__height = height
 
     @property
     def width(self):
@@ -37,14 +51,3 @@ class Rectangle:
         if value < 0:
             raise ValueError("height must be >= 0")
         self.__height = value
-
-    def __init__(self, width=0, height=0):
-        """
-        initialize the attributes
-
-        Args:
-            width: number of width
-            height: number of width
-        """
-        self.__width = width
-        self.__height = height
