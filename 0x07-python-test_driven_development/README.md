@@ -26,3 +26,13 @@
 * A documentation is not a simple word, it’s a real sentence explaining what’s the purpose of the module, class or method (the length of it will be verified)
 * We strongly encourage you to work together on test cases, so that you don’t miss any edge case – The Checker is checking for tests!
 
+## Tasks
+
+### 0. Integers addition 
+
+Write a function that adds 2 integers.
+* Prototype: `def add_integer(a, b=98):`
+* `a` and `b` must be integers or floats, otherwise raise a `TypeError` exception with the message `a must be an integer` or `b must be an integer`
+* `a` and `b` must be first casted to integers if they are float
+* Returns an integer: the addition of `a` and `b`
+* You are not allowed to import any module

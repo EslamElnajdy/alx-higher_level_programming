@@ -36,12 +36,19 @@ Import "add_integer"
     Traceback (most recent call last):
     ...
     TypeError: a must be an integer
+
+8-
+    >>> add_integer(-10.5, -2.5)
+    -12
+
+9-
+    >>> add_integer()
+    Traceback (most recent call last):
+    ...
+    TypeError: add_integer() missing 1 required positional argument: 'a'
+
 7-
     >>> add_integer("aa", "bbb")
     Traceback (most recent call last):
     ...
     TypeError: a must be an integer
-
-8-
-    >>> add_integer(-10.5, -2.5)
-    -12

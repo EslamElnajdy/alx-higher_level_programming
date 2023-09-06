@@ -17,3 +17,7 @@ try:
     print(add_integer("hello", "world"))
 except Exception as e:
     print(e)
+try:
+    print(add_integer())
+except Exception as e:
+    print(e)
