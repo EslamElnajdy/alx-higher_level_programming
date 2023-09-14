@@ -16,7 +16,7 @@ def add_items():
     else:
         f_list = []
     for i in range(1, len(argv)):
-        f_list.append(sys.argv[i])
+        f_list.append(argv[i])
     save_to_json_file(f_list, filename)
 
 
