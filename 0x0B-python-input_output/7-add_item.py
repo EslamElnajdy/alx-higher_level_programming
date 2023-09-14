@@ -1,24 +1,19 @@
 #!/usr/bin/python3
-"""module doc"""
-from sys import argv
-from os import path
+"""Module doc"""
 import json
+import os.path
+from sys import argv
 
-save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
-load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
+save_to_json_file = __import__('7-save_to_json_file').save_to_json_file
+load_from_json_file = __import__('8-load_from_json_file').load_from_json_file
 
+filename = "add_item.json"
+j_list = []
 
-def add_items():
-    """
-    func doc
-    """
-    filename = "add_item.json"
-    f_list = []
-    if path.isfile(filename):
-        f_list = load_from_json_file(filename)
-    for i in range(1, len(argv)):
-        f_list.append(argv[i])
-    save_to_json_file(f_list, filename)
+if os.path.exists(filename):
+    json_list = load_from_json_file(filename)
 
+for index in argv[1:]:
+    j_list.append(index)
 
-add_items()
+save_to_json_file(j_list, filename)
