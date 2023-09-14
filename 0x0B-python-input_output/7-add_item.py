@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-"""Module doc"""
+"""
+Module doc
+"""
 
 import sys
 import json
