@@ -13,6 +13,18 @@ class Rectangle(Base):
         self.x = x
         self.y = y
 
+    def check(self, target, name_target):
+        """validation of all setter methods"""
+
+        if not isinstance(target, int):
+            raise TypeError(f"{name_target} must be an integer")
+        if name_target == "x" or name_target == "y":
+            if target < 0:
+                raise ValueError(f"{name_target} must be >= 0")
+        else:
+            if target <= 0:
+                raise ValueError(f"{name_target} must be > 0")
+
     @property
     def width(self):
         """width getter"""
@@ -21,6 +33,7 @@ class Rectangle(Base):
     @width.setter
     def width(self, width):
         """width setter"""
+        self.check(width, "width")
         self.__width = width
 
     @property
@@ -31,6 +44,7 @@ class Rectangle(Base):
     @height.setter
     def height(self, height):
         """height setter"""
+        self.check(height, "height")
         self.__height = height
 
     @property
@@ -41,6 +55,7 @@ class Rectangle(Base):
     @x.setter
     def x(self, x):
         """x setter"""
+        self.check(x, "x")
         self.__x = x
 
     @property
@@ -51,4 +66,5 @@ class Rectangle(Base):
     @y.setter
     def y(self, y):
         """y setter"""
+        self.check(y, "y")
         self.__y = y
