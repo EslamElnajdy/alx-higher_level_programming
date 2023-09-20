@@ -89,9 +89,12 @@ class Rectangle(Base):
                 print("#", end='')
             print()
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """assigns an argument to each attribute"""
         lst = (self.id, self.width, self.height, self.x, self.y)
         if args:
             self.id, self.width, self.height, self.x, self.y = \
                 args + lst[len(args):len(lst)]
+        if kwargs:
+            for (key, value) in kwargs.items():
+                setattr(self, key, value)
