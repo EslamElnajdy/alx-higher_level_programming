@@ -13,6 +13,9 @@ class Rectangle(Base):
         self.x = x
         self.y = y
 
+    def __str__(self) -> str:
+        return f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - {self.__width}/{self.__height}"
+
     def check(self, target, name_target):
         """validation of all setter methods"""
 
