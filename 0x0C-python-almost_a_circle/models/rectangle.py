@@ -68,3 +68,8 @@ class Rectangle(Base):
         """y setter"""
         self.check(y, "y")
         self.__y = y
+
+    def area(self):
+        """Return the area of reactangle"""
+
+        return self.__height * self.__width
