@@ -18,7 +18,9 @@ class Square(Rectangle):
         super().__init__(size, size, x, y, id)
 
     def __str__(self) -> str:
-        """override on Rectangle class"""
+        """
+        override on Rectangle class
+        """
         return f"[square] ({self.id}) {self.x}/{self.y} - {self.width}"
 
     @property
