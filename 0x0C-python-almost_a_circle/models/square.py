@@ -17,7 +17,7 @@ class Square(Rectangle):
         """
         super().__init__(size, size, x, y, id)
 
-    def __str__(self) -> str:
+    def __str__(self):
         """
         override on Rectangle class
         """
