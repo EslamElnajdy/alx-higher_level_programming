@@ -3,6 +3,7 @@
 import json
 import os
 
+
 class Base:
     """
     base class
@@ -78,4 +79,3 @@ class Base:
                 for d in list_dict:
                     lst.append(cls.create(**d))
         return lst
-
