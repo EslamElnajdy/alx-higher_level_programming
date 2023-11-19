@@ -8,10 +8,6 @@ import MySQLdb
 import sys
 
 if __name__ == "__main__":
-    # check if the correct number of arguments is 4
-    if len(sys.argv) != 4:
-        print("Usage: {} <username> <password> <database>".format(sys.argv[0]))
-        sys.exit(1)
     db = MySQLdb.connect(
         host="localhost",
         port=3306,
@@ -26,6 +22,3 @@ if __name__ == "__main__":
     states = cursor.fetchall()
     for state in states:
         print(state)
-
-    cursor.close()
-    db.close()
