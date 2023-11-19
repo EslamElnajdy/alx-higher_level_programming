@@ -20,10 +20,8 @@ if __name__ == "__main__":
         db=sys.argv[3],
         charset="utf8"
     )
-    # Create a cursor object to interact with the database
     cursor = db.cursor()
-    # Execute the query to fetch states
-    cursor.execute("SELECT * FROM states ORDER BY states.id;")
+    cursor.execute("SELECT * FROM `states`")
 
     states = cursor.fetchall()
     for state in states:
