@@ -1,7 +1,6 @@
 #!/usr/bin/python3
-# lists all states from the database hbtn_0e_0_usa
-# Your script should take 3 arguments:
-#  < mysql username >, < mysql password > and < database name >
+"""lists all states from the database hbtn_0e_0_usa"""
+
 
 
 import MySQLdb
