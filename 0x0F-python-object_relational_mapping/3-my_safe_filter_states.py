@@ -17,7 +17,7 @@ if __name__ == "__main__":
     )
     cursor = db.cursor()
     query = "SELECT * FROM states WHERE name LIKE %s\
-             ORDER BY states.id;".format(argv[4])
+             ORDER BY states.id;"
     cursor.execute(query, (argv[4],))
 
     states = cursor.fetchall()
