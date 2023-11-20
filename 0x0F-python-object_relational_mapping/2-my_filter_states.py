@@ -16,7 +16,7 @@ if __name__ == "__main__":
         charset="utf8"
     )
     cursor = db.cursor()
-    query = "SELECT * FROM states WHERE name='{}'\
+    query = "SELECT * FROM states WHERE name LIKE BINARY '{}'\
              ORDER BY states.id;".format(argv[4])
     cursor.execute(query)
 
