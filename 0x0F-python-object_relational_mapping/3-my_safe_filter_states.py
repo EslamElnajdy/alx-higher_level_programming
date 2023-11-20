@@ -16,7 +16,7 @@ if __name__ == "__main__":
         charset="utf8"
     )
     cursor = db.cursor()
-    cursor.execute("SELECT * FROM states WHERE name LIKE %s", (argv[4],))
+    cursor.execute("SELECT * FROM states WHERE name LIKE %s", (argv[4], ))
 
     states = cursor.fetchall()
     for state in states:
