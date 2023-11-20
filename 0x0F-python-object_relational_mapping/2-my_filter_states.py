@@ -16,8 +16,8 @@ if __name__ == "__main__":
         charset="utf8"
     )
     cursor = db.cursor()
-    cursor.execute(f"SELECT * FROM `states` WHERE name \
-                   LIKE BINARY '{argv[4]}'")
+    cursor.execute("SELECT * FROM states WHERE name \
+                   LIKE BINARY '{}'".format(argv[4]))
 
     states = cursor.fetchall()
     for state in states:
