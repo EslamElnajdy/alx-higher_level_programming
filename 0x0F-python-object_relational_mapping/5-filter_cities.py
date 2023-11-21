@@ -24,5 +24,6 @@ if __name__ == "__main__":
             """
     cursor.execute(query, (argv[4], ))
     cities = [row[0] for row in cursor.fetchall()]
-    if cities:
-        print(",".join(cities))
+    print(*cities, sep=", ") 
+    cursor.close()
+    db.close()  
