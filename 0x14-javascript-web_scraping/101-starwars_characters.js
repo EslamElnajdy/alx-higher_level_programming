@@ -9,22 +9,22 @@ request(apiUrl, (err, res, body) => {
   } else {
     const data = JSON.parse(body).characters;
     const promises = data.map(character => {
-        return new Promise((resolve, reject) => {
-            request(character, (err, res, body2) => {
-                if (err) {
-                reject(err);
-                } else {
-                resolve(JSON.parse(body2).name);
-                }
-            });
+      return new Promise((resolve, reject) => {
+        request(character, (err, res, body2) => {
+          if (err) {
+            reject(err);
+          } else {
+            resolve(JSON.parse(body2).name);
+          }
         });
-    })
+      });
+    });
     Promise.all(promises)
-    .then(names => {
+      .then(names => {
         names.forEach(name => console.log(name));
-    })
-    .catch(error => {
+      })
+      .catch(error => {
         console.error(error);
-    })
+      });
   }
 });
