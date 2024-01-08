@@ -9,8 +9,11 @@ const filename = process.argv[3];
 request(url, (err, res, body) => {
   if (err) {
     console.error(err);
+    return;
   }
   fs.writeFile(filename, body, 'utf8', (error) => {
-    console.log(error);
+    if (error) {
+      console.log(error);
+    }
   });
 });
